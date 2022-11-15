@@ -128,7 +128,7 @@ class CategoryUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
 class CategoryDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     model = Category
     login_url = reverse_lazy('account_login')
-    template_name = templ.get('category').get('update')
+    template_name = templ.get('category').get('delete')
     success_url = reverse_lazy('categories')
 
     def test_func(self):
