@@ -1,7 +1,7 @@
 FOLDER = 'main/'
 TEMPLATES = {
     'category': {
-        'create': f'{FOLDER}category_delete.html',
+        'delete': f'{FOLDER}category_delete.html',
         'update': f'{FOLDER}category_update.html',
         'list': f'{FOLDER}category_list.html',
     },
