@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block title %}Категории{% endblock %}
+
+{% block content %}
+<h1>Создать свою категорию транзакций</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form|crispy }}
+    <input type="submit" class="btn btn-success" value="Создать">
+</form>
+<hr>
+<h1>Категории:</h1>
+{% for category in categories %}
+<p style="font-size: 20px"><b>Название:</b> {{ category.name }} |
+    <a href="{% url 'category_delete' category.pk %}"><img src="{% static 'icons/collector.png'%}" class="icon_cat"></a>
+    <a href="{% url 'category_update' category.pk %}"><img src="{% static 'icons/pencile.png' %}" class="icon_cat"></a>
+</p>
+{% endfor %}
+{% endblock %}

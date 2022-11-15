@@ -1,0 +1,128 @@
+h1 {
+    color: black;
+}
+
+.icon_cat {
+    width: 25px;
+    height: 25px;
+}
+
+body {
+    min-height: 75rem;
+    padding-top: 4.5rem;
+}
+
+.container {
+    word-wrap: break-word;
+}
+
+.review {
+    max-width: 40%;
+}
+
+.bg-black {
+  background: #000;
+}
+
+.skill-block {
+  width: 30%;
+}
+
+@media (min-width: 991px) and (max-width:1200px) {
+  .skill-block {
+    padding: 32px !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .skill-block {
+    padding: 56px !important;
+  }
+}
+
+
+.dropbtn {
+  background-color: #1b2021;
+  color: white;
+  width: 856px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  width: 300px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.button {
+      background-color: #FFFF;
+      border: 1px;
+      color: black;
+      padding: 20px 34px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 20px;
+      margin: 4px 2px;
+      cursor: pointer;
+}
+
+.inbox-icon-container {
+  margin-right: 15px;
+}
+
+.inbox-icon {
+  color: #333;
+  transition: 0.5s;
+}
+
+.inbox-icon:hover {
+  transition: 0.5s;
+}
+
+.sent-message {
+  background-color: #f3f3f3;
+  border-radius: 30px;
+  padding: 10px 25px;
+  width: 25%;
+}
+
+.received-message {
+  background-color: rgb(1, 196, 255);
+  color: #fff;
+  border-radius: 30px;
+  padding: 10px 25px;
+  width: 25%;
+  float: right;
+}
+
+.empty-text {
+  color: #777;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+
+.dropdown:hover .dropdown-content {display: block;}
+
+
+.dropdown:hover .dropbtn {background-color: #1b2021;}

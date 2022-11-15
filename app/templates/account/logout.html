@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}Выход{% endblock %}
+
+{% block content %}
+    <h1>Выйти</h1>
+    <p>Вы действительно хотите выйти?</p>
+    <form method="post">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <input type="submit" class="btn btn-danger" value="Выйти">
+    </form>
+{% endblock %}

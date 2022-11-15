@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block title %}Транзакции{% endblock %}
+
+{% block content %}
+<h1>Транзакции</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form|crispy }}
+    <input type="submit" class="btn btn-success" value="Сортировать">
+</form>
+<hr>
+<a href="{% url 'transactions_create' %}" class="button">Добавить транзакцию</a>
+{% for transaction in transactions %}
+<p style="font-size: 20px"><b>Сумма: </b>{{ transaction.total_sum }}, руб. |
+    <b>Категория:</b> <u>{{transaction.category }}</u> | {{ transaction.time }}</p>
+{% endfor %}
+{% endblock %}

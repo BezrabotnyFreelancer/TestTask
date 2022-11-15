@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block title %}Обновление категории{% endblock %}
+
+{% block content %}
+<form method="post">
+    {% csrf_token %}
+    {{ form|crispy }}
+    <h5>Вы действительно хотите удалить категорию - {{ category.name }} ?</h5>
+    <input type="submit" class="btn btn-danger" value="Удалить">
+</form>
+{% endblock %}
