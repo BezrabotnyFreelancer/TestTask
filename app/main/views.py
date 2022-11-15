@@ -26,24 +26,6 @@ if datetime.now().time() == time(9, 0, 0, 0):
         send_mail('Статистика', msg, settings.EMAIL_HOST_USER, [i.email])
 
 
-FOLDER = 'main/'
-TEMPLATES = {
-    'category': {
-        'create': f'{FOLDER}category_delete.html',
-        'update': f'{FOLDER}category_update.html',
-        'list': f'{FOLDER}category_list.html',
-    },
-    'transactions': {
-        'create': f'{FOLDER}create_transaction.html',
-        'list': f'{FOLDER}transaction_list.html',
-    },
-    'profile': {
-        'info': f'{FOLDER}profile.html',
-        'replenishment': f'{FOLDER}replenishment.html'
-    },
-}
-
-
 @login_required(login_url='account_login')
 def main_profile(request):
     return render(request, templ.get('profile').get('info'), context={'profile': get_main_profile(request)})
